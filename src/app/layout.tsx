@@ -34,13 +34,11 @@ export default async function RootLayout({
         <SupabaseProvider>
           <UserProvider>
             <ModalProvider products={products} />
-            <Sidebar songs={userSongs}>
-              {children}
-            </Sidebar>
+            <Sidebar songs={userSongs}>{children}</Sidebar>
             <Player />
           </UserProvider>
         </SupabaseProvider>
       </body>
     </html>
-  )
+  );
 }

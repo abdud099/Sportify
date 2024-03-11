@@ -7,14 +7,11 @@ import SubscribeModal from "@/components/SubscribeModal";
 import UploadModal from "@/components/UploadModal";
 import { ProductWithPrice } from "../../types";
 
-
 interface ModalProviderProps {
   products: ProductWithPrice[];
 }
 
-const ModalProvider: React.FC<ModalProviderProps> = ({
-  products
-}) => {
+const ModalProvider: React.FC<ModalProviderProps> = ({ products }) => {
   const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
@@ -32,6 +29,6 @@ const ModalProvider: React.FC<ModalProviderProps> = ({
       <UploadModal />
     </>
   );
-}
+};
 
 export default ModalProvider;
